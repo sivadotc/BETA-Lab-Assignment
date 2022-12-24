@@ -22,17 +22,19 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Composable
 fun HomeMediumScreen(navigator: DestinationsNavigator){
+
         Row() {
             Column(modifier = Modifier
                 .weight(0.75f)
                 .fillMaxSize(), verticalArrangement = Arrangement.SpaceEvenly) {
                 GreetingSection(name = "Siva")
-                ChipSection(chips = listOf("Siva","2019WA86989","Lab 3","SDPD","CSIWZ424"))
+                ChipSectionMedium(chips = listOf("Siva","2019WA86989","Lab 3","SDPD","CSIWZ424"))
 
             }
             Column(modifier = Modifier
                 .weight(1f)
-                .fillMaxWidth()) {
+                .fillMaxSize(), verticalArrangement = Arrangement.Center
+            ) {
                 ObjectiveSectionMedium()
                 CurrentLabSectionMedium(navigator)
             }
@@ -71,7 +73,7 @@ fun ObjectiveSectionMedium() {
 fun CurrentLabSectionMedium(navigator: DestinationsNavigator){
     Box(modifier = Modifier
         .padding(15.dp)
-        .fillMaxSize()
+        .fillMaxWidth()
         .clip(RoundedCornerShape(20.dp))
         .background(LightGreen1)
     ){
@@ -134,6 +136,7 @@ fun ChipSectionMedium(chips: List<String>){
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier
+                    .fillMaxWidth()
                     .padding(start = 15.dp, top = 15.dp, bottom = 15.dp)
                     .clip(RoundedCornerShape(10.dp))
                     .clickable {
