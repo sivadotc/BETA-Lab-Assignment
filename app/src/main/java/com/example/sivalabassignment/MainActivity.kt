@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SivaLabAssignmentTheme {
+            LabAssignmentTheme {
 
                 Surface(
                     modifier = Modifier.fillMaxSize(),

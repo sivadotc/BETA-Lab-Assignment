@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 
 
 @Composable
-fun SivaLabAssignmentTheme(
+fun LabAssignmentTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
