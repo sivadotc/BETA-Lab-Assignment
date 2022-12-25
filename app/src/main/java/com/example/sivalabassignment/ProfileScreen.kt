@@ -14,10 +14,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.sivalabassignment.ui.theme.ButtonBlue
-import com.example.sivalabassignment.ui.theme.LightGreen1
-import com.example.sivalabassignment.ui.theme.TextWhite
-import com.example.sivalabassignment.ui.theme.Typography
+import com.example.sivalabassignment.ui.theme.*
 
 
 @Composable
@@ -102,12 +99,12 @@ fun AboutMe() {
                 .padding(15.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(20.dp))
-                .background(LightGreen1), contentAlignment = Alignment.Center
+                .background(DarkerButtonBlue), contentAlignment = Alignment.Center
         ) {
             Text(
                 text = stringResource(id = R.string.about_me),
                 style = Typography.h2,
-                modifier = Modifier.padding(15.dp), textAlign = TextAlign.Justify
+                modifier = Modifier.padding(15.dp), textAlign = TextAlign.Justify, color = TextWhite
             )
         }
     }

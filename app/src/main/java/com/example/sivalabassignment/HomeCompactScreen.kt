@@ -20,14 +20,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.sivalabassignment.ui.theme.*
-import kotlin.text.Typography
+import com.example.sivalabassignment.ui.theme.Typography
 
 
 @Composable
 fun HomeCompactScreen(){
     Column {
         GreetingSection(name = "Siva")
-        ChipSection(chips = listOf("Siva","2019WA86989","Lab 3","SDPD","CSIWZ424"))
+        ChipSection(chips = listOf("Siva","2019WA86989","Lab 4","SDPD","CSIWZ424"))
         ObjectiveSection()
         CurrentLabSection()
     }
@@ -96,14 +96,14 @@ fun ChipSection(chips: List<String>){
                         text = chips[it],
                         color = TextWhite,
                         modifier = Modifier.padding(15.dp),
-                        style = com.example.sivalabassignment.ui.theme.Typography.h2
+                        style = Typography.h2
                     )
                 }
                 else Text(
                     text = chipValues[it],
                     color = TextWhite,
                     modifier = Modifier.padding(15.dp),
-                    style = com.example.sivalabassignment.ui.theme.Typography.h2
+                    style = Typography.h2
                 )
             }
 
@@ -117,7 +117,7 @@ fun ObjectiveSection() {
         .padding(15.dp)
         .fillMaxWidth()
         .clip(RoundedCornerShape(20.dp))
-        .background(LightRed)){
+        .background(DarkerButtonBlue)){
         Column(
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.SpaceBetween,
@@ -126,19 +126,18 @@ fun ObjectiveSection() {
                 .fillMaxWidth()
         ) {
             Text(
-                text = "Lab 3 Objective",
-                style = com.example.sivalabassignment.ui.theme.Typography.h1
+                text = "Lab 4 Objective",
+                style = Typography.h1, color = TextWhite
             )
             Spacer(modifier = Modifier.height(10.dp))
             Text(
                 text = stringResource(id = R.string.lab4_objective),
-                style = com.example.sivalabassignment.ui.theme.Typography.h2
+                style = Typography.h2, color = TextWhite
             )
         }
 
     }
 }
-
 
 @Composable
 fun CurrentLabSection(){
@@ -147,7 +146,7 @@ fun CurrentLabSection(){
             .padding(15.dp)
             .fillMaxWidth()
             .clip(RoundedCornerShape(20.dp))
-            .background(LightGreen1)
+            .background(DarkerButtonBlue)
     ){
         Column(
             horizontalAlignment = Alignment.Start,
@@ -156,16 +155,16 @@ fun CurrentLabSection(){
                 .padding(15.dp)
                 .fillMaxWidth()
         ) {
-            Text(text = "Learning Outcome", style = com.example.sivalabassignment.ui.theme.Typography.h1)
+            Text(text = "Learning Outcome", style = Typography.h1, color = TextWhite)
             Spacer(modifier = Modifier.height(10.dp))
             Text(
-                text = "Create an App with sophisticated UI",
-                style = com.example.sivalabassignment.ui.theme.Typography.h2,
+                text = "Create an App with sophisticated UI",color = TextWhite,
+                style = Typography.h2,
                 modifier = Modifier.padding(start = 20.dp)
             )
             Text(
-                text = "Elegant User Interface",
-                style = com.example.sivalabassignment.ui.theme.Typography.h2,
+                text = "Elegant User Interface", color = TextWhite,
+                style = Typography.h2,
                 modifier = Modifier.padding(start = 20.dp)
             )
 

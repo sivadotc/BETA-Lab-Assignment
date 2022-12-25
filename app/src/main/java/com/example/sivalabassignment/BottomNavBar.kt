@@ -15,6 +15,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.example.sivalabassignment.ui.theme.ButtonBlue
+import com.example.sivalabassignment.ui.theme.DarkerButtonBlue
 import com.example.sivalabassignment.ui.theme.Typography
 
 
@@ -28,7 +30,7 @@ fun BottomNavBar(
     val backStackEntry = navController.currentBackStackEntryAsState()
     BottomNavigation(
         modifier = modifier,
-        backgroundColor = Color.DarkGray,
+        backgroundColor = DarkerButtonBlue,
         elevation = 5.dp
     ) {
         items.forEach { item ->
@@ -36,8 +38,8 @@ fun BottomNavBar(
             BottomNavigationItem(
                 selected = selected,
                 onClick = { onItemClick(item) },
-                selectedContentColor = Color.Green,
-                unselectedContentColor = Color.Gray,
+                selectedContentColor = ButtonBlue,
+                unselectedContentColor = Color.White,
                 icon = {
                     Column(horizontalAlignment = CenterHorizontally) {
                         Icon(imageVector = item.icon, contentDescription = item.name)

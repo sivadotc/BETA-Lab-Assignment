@@ -11,7 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.example.sivalabassignment.ui.theme.DarkerButtonBlue
 import com.example.sivalabassignment.ui.theme.LightGreen1
+import com.example.sivalabassignment.ui.theme.TextWhite
 import com.example.sivalabassignment.ui.theme.Typography
 
 
@@ -47,12 +49,12 @@ fun Sophisticated(){
                 .padding(15.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(20.dp))
-                .background(LightGreen1), contentAlignment = Center
+                .background(DarkerButtonBlue), contentAlignment = Center
         ) {
             Text(
                 text = "I have added bottom navigation feature in this version",
                 style = Typography.h2,
-                modifier = Modifier.padding(15.dp), textAlign = TextAlign.Justify
+                modifier = Modifier.padding(15.dp), textAlign = TextAlign.Justify, color = TextWhite
             )
         }
     }
@@ -67,12 +69,12 @@ fun Elegant(){
                 .padding(15.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(20.dp))
-                .background(LightGreen1), contentAlignment = Center
+                .background(DarkerButtonBlue), contentAlignment = Center
         ) {
             Text(
                 text = "I have imported custom colors to make this UI more elegant than previous version",
                 style = Typography.h2,
-                modifier = Modifier.padding(15.dp), textAlign = TextAlign.Justify
+                modifier = Modifier.padding(15.dp), textAlign = TextAlign.Justify, color = TextWhite
             )
         }
     }
