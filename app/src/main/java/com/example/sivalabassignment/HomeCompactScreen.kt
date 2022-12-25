@@ -27,7 +27,7 @@ import com.example.sivalabassignment.ui.theme.Typography
 fun HomeCompactScreen(){
     Column {
         GreetingSection(name = "Siva")
-        ChipSection(chips = listOf("Siva","2019WA86989","Lab 4","SDPD","CSIWZ424"))
+        ChipSection(chips = listOf("Siva","2019WA86989","Lab 4","SDPD","CSIWZC424"))
         ObjectiveSection()
         CurrentLabSection()
     }
